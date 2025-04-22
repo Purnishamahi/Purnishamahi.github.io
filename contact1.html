@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-text {
+      color: #fff8f8;
+    }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .logo-text p {
+      margin: 0.3rem 0 0;
+      font-style: italic;
+      font-size: 1rem;
+      color: #ffeef3;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeef3;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #FF4D88;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    form {
+      background-color: #ffe0eb;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background-color: #FF4D88;
+      border: none;
+      color: #fff8f8;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e03e76;
+    }
+
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .back-button-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-text">
+      <h1>The Secret Garden</h1>
+      <p>A place where flowers speak, and every bloom tells a story.</p>
+    </div>
+    <nav>
+      <a href="flower.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Contact Us</h2>
+    <p>If you have questions, suggestions, or just want to share your love for flowers, we’d love to hear from you! Fill out the form below and we’ll get back to you as soon as we can.</p>
+
+    <form id="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p class="success-message" id="success-message">Your message has been sent successfully!</p>
+    </form>
+
+    <div class="back-button-container">
+      <a href="index.html" class="back-button">← Back</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual submission
+      successMessage.style.display = 'block';
+      form.reset(); // Clear form inputs
+
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000); // Hide after 5 seconds
+    });
+  </script>
+</body>
+</html>
