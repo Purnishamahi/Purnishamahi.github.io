@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunflower - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fce4ec;
+      color: #4a2c2a;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+      display: inline-block;
+    }
+
+    .animated-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .peony-image {
+      float: right;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 0 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(236, 105, 157, 0.3);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff8f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FF4D88;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #7b6e66;
+      font-size: 0.9rem;
+    }
+ .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let heading = document.querySelector(".animated-text");
+      let text = heading.innerText;
+      heading.innerHTML = "";
+
+      text.split('').forEach((char, index) => {
+        let span = document.createElement("span");
+        span.innerText = char;
+        span.style.animationDelay = `${index * 0.1}s`;
+        heading.appendChild(span);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Sunflower</h1>
+  </header>
+
+  <div class="content">
+    <img class="peony-image" src="https://i.pinimg.com/236x/56/f5/c2/56f5c25c049a474f39d7d137f0c5c967.jpg" alt="Sunflower Flower" />
+
+    <h2>Symbolism</h2>
+    <p><em>A beacon of happiness, loyalty, and sunshine — the sunflower turns its face toward light and life.</em></p>
+    <ul>
+      <li><strong>Happiness:</strong> Bright joy and optimism</li>
+      <li><strong>Loyalty:</strong> Following the sun, always faithful</li>
+      <li><strong>Longevity:</strong> Due to its tall stature and strong bloom</li>
+    </ul>
+
+    <h2>Scientific Name</h2>
+    <p><em>Helianthus annuus</em></p>
+
+    <h2>In the Language of Flowers</h2>
+    <p>In floriography, the sunflower expresses admiration, adoration, and unshakable faith. Its bold bloom is often seen as a sign of loyalty and positivity — making it a radiant gift for friends, mentors, or anyone who brings light to your life.</p>
+
+    <h2>Cultural Roots</h2>
+    <ul>
+      <li><strong>Native American Culture:</strong> Revered as a symbol of harvest and provision; seeds used for food and ceremony.</li>
+      <li><strong>Greek Mythology:</strong> Linked to the story of Clytie, who turned into a sunflower after longing for the sun god, Helios.</li>
+      <li><strong>China:</strong> Sign of vitality, good luck, and long life.</li>
+      <li><strong>Victorian Era:</strong> A symbol of unwavering loyalty and admiration.</li>
+    </ul>
+
+    <h2>History</h2>
+    <p>Native to the Americas, sunflowers were cultivated as early as 3,000 B.C. by Indigenous peoples for their beauty and usefulness. Spanish explorers brought them to Europe in the 16th century, where they bloomed in art and gardens.</p>
+    <p>By the 19th century, they had captured the attention of artists like Van Gogh and flower lovers alike. Today, they remain icons of brightness, joy, and resilience — always facing the sun.</p>
+<a href="flowerexplore.html.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+</body>
+</html>

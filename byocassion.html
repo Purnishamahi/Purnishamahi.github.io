@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>By Occasion - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #FF4D88;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flower-card {
+      background-color: #ffe0eb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .flower-card:hover {
+      transform: scale(1.03);
+      background-color: #ffd1e0;
+    }
+
+    .flower-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .flower-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-family: 'Playfair Display', serif;
+      color: #e03e76;
+    }
+
+    .flower-card p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #5c4340;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+.back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flower Gallery by Occasion</h1>
+  </header>
+
+  <section class="section">
+    <h2>Celebrate Life's Moments with Flowers</h2>
+
+    <div class="gallery-grid">
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/70/66/3f/70663f1ddefbb177352261c076059cef.jpg" alt="Valentine's Day - Roses">
+        <h3>Valentine's Day</h3>
+        <p>Classic red roses to express deep love and romance.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/8b/86/53/8b8653eee83573576277370f40c6a009.jpg" alt="Mother's Day - Carnations">
+        <h3>Mother's Day</h3>
+        <p>Pink carnations showing admiration and appreciation.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/14/b3/9c/14b39c3fbe1374a9c84b1d52804eec77.jpg" alt="Anniversary - Orchids">
+        <h3>Anniversary</h3>
+        <p>Elegant orchids for long-lasting love and grace.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/59/4d/94/594d940b717325db6e38f6a7a1ac1c9c.jpg" alt="Birthday - Daisies">
+        <h3>Birthday</h3>
+        <p>Joyful daisies bringing cheer to every birthday.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/df/d5/96/dfd596b8bf75e79d852b307e1e34f629.jpg" alt="Congratulations - Sunflowers">
+        <h3>Congratulations</h3>
+        <p>Sunflowers celebrating achievements and new beginnings.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/ec/a1/89/eca18962a48f5ec7e8010026069b2ea0.jpg" alt="Thank You - Hydrangeas">
+        <h3>Thank You</h3>
+        <p>Hydrangeas representing heartfelt gratitude and appreciation.</p>
+      </div>
+    
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/86/95/22/869522a4ff38c3295b9fb3b9c8630452.jpg" alt="Wedding - Calla Lily">
+        <h3>Wedding</h3>
+        <p>Calla lilies representing elegance and union.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/98/e2/26/98e226eda2f58b88223fcb1c522c1003.jpg" alt="Get Well - Gerbera Daisies">
+        <h3>Get Well Soon</h3>
+        <p>Bright gerberas lifting spirits and bringing healing energy.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/0d/a1/6f/0da16f58f2b5ea9af2e4b8b4715f215b.jpg" alt="Housewarming - Tulips">
+        <h3>Housewarming</h3>
+        <p>Colorful tulips for fresh starts and new homes.</p>
+      </div>
+      <div class="flower-card">
+        <img src="https://i.pinimg.com/236x/99/6a/74/996a74d68c7926223b5e8455d059810b.jpg" alt="Farewell - Forget-me-not">
+        <h3>Farewell</h3>
+        <p>Forget-me-nots for meaningful goodbyes and lasting memories.</p>
+      </div>
+    </div>
+  </section>
+  <div class="back-button-container">
+    <a href="gallery.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. Capturing beauty, one bloom at a time.
+  </footer>
+</body>
+</html>

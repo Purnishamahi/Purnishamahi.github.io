@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Flower Bouquet - Login and Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #ffffff, #f8d7e0);
+      padding: 30px;
+    }
+    .container {
+      max-width: 850px;
+      width: 100%;
+      background: #fff;
+      padding: 40px 30px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .title:before {
+      content: '';
+      position: relative;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 25px;
+      background: #ff4b82;
+    }
+    .input-box {
+      margin: 10px 0;
+      position: relative;
+    }
+    .input-box input {
+      width: 100%;
+      height: 50px;
+      padding: 0 30px;
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .input-box input:focus {
+  outline: none;
+  border: 2px solid #ff4b82;
+  box-shadow: 0 0 8px rgba(255, 75, 130, 0.4);
+}
+
+    .error-message {
+      color: red;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+    .button input {
+      width: auto;
+      height: 50px;
+      background: #ff4b82;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+    .button input:hover {
+      background: #e33a73;
+    }
+.button input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ff4b82;
+}
+    .text {
+      text-align: center;
+      margin-top: 15px;
+      cursor: pointer;
+      color: #e33a73;
+      font-weight: 500;
+    }
+    .text:hover {
+      text-decoration: underline;
+    }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-message {
+  text-align: center;
+  color: #ff4b82;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  animation: fadeIn 1s ease-out;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+<div class="welcome-message">Welcome to Secrect Garden </div>
+
+    <div id="login-form">
+      <div class="title">Login</div>
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="text" id="loginEmail" placeholder="Enter your email">
+          <div class="error-message" id="loginEmailError"></div>
+        </div>
+        <div class="input-box">
+          <input type="password" id="loginPassword" placeholder="Enter your password">
+          <div class="error-message" id="loginPasswordError"></div>
+        </div>
+        <div class="button input-box">
+          <input type="submit" value="Login">
+        </div>
+      </form>
+      <div class="text" onclick="showSignup()">Don't have an account? Register now</div>
+    </div>
+
+    <div id="signup-form" style="display: none;">
+      <div class="title">Signup</div>
+      <form id="signupForm">
+        <div class="input-box">
+          <input type="text" id="signupName" placeholder="Enter your name">
+          <div class="error-message" id="signupNameError"></div>
+        </div>
+        <div class="input-box">
+          <input type="text" id="signupEmail" placeholder="Enter your email">
+          <div class="error-message" id="signupEmailError"></div>
+        </div>
+        <div class="input-box">
+          <input type="password" id="signupPassword" placeholder="Enter your password">
+          <div class="error-message" id="signupPasswordError"></div>
+        </div>
+        <div class="button input-box">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+      <div class="text" onclick="showLogin()">Already have an account? Login now</div>
+    </div>
+  </div>
+<script>
+  function showSignup() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('signup-form').style.display = 'block';
+  }
+
+  function showLogin() {
+    document.getElementById('signup-form').style.display = 'none';
+    document.getElementById('login-form').style.display = 'block';
+  }
+
+  function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+  }
+
+  function clearErrors() {
+    const errors = document.querySelectorAll('.error-message');
+    errors.forEach(error => error.textContent = '');
+  }
+
+  function validateSignup(event) {
+    event.preventDefault();
+    clearErrors();
+    let isValid = true;
+
+    const name = document.getElementById('signupName').value.trim();
+    const email = document.getElementById('signupEmail').value.trim();
+    const password = document.getElementById('signupPassword').value;
+
+    if (!name) {
+      document.getElementById('signupNameError').textContent = 'Please enter your name';
+      isValid = false;
+    }
+    if (!email) {
+      document.getElementById('signupEmailError').textContent = 'Please enter your email';
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      document.getElementById('signupEmailError').textContent = 'Please enter a valid email address';
+      isValid = false;
+    }
+    if (!password) {
+      document.getElementById('signupPasswordError').textContent = 'Please enter a password';
+      isValid = false;
+    } else if (password.length < 6) {
+      document.getElementById('signupPasswordError').textContent = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Save user credentials to localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+
+      alert('Signup successful!');
+      showLogin(); // switch to login form
+    }
+  }
+
+  function validateLogin(event) {
+    event.preventDefault();
+    clearErrors();
+    let isValid = true;
+
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+
+    if (!email) {
+      document.getElementById('loginEmailError').textContent = 'Please enter your email';
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      document.getElementById('loginEmailError').textContent = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    if (!password) {
+      document.getElementById('loginPasswordError').textContent = 'Please enter your password';
+      isValid = false;
+    }
+
+    if (isValid) {
+      const storedEmail = localStorage.getItem('userEmail');
+      const storedPassword = localStorage.getItem('userPassword');
+
+      if (email === storedEmail && password === storedPassword) {
+        // Redirect to main.html on successful login
+        window.location.href = 'flower.html';
+      } else {
+        document.getElementById('loginPasswordError').textContent = 'Invalid email or password';
+      }
+    }
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', validateLogin);
+  document.getElementById('signupForm').addEventListener('submit', validateSignup);
+</script>
+
+
+  </body>
+</html>

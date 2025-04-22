@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo {
+      flex: 1 1 auto;
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    .logo p {
+      font-style: italic;
+      margin: 0.3rem 0 0 0;
+      color: #ffeef3;
+      font-size: 0.95rem;
+    }
+
+    nav.nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    nav.nav-links a {
+      text-decoration: none;
+      color: #fff8f8;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav.nav-links a:hover {
+      color: #ffeef3;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #FF4D88;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background-color: #FF4D88;
+      border: 1px solid #e03e76;
+      color: #fff8f8;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #e03e76;
+    }
+
+    .newsletter {
+      background-color: #ffe0eb;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .newsletter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #FF4D88;
+    }
+
+    .newsletter p {
+      margin-bottom: 1rem;
+      color: #4a2c2a;
+    }
+
+    .newsletter a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #FF4D88;
+      border: 1px solid #e03e76;
+      color: #fff8f8;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter a:hover {
+      background-color: #e03e76;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>The Secret Garden</h1>
+      <p>A place where flowers speak, and every bloom tells a story.</p>
+    </div>
+    <nav class="nav-links">
+      <a href="flower.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Discover the Language of Flowers</h2>
+    <p>Step into the timeless world of floriography, where petals whisper hidden meanings. From romantic roses to peaceful lilies, each flower has a message waiting to be decoded.</p>
+    <div class="buttons">
+      <a href="flowerexplore.html.html">Explore the Flower Encyclopedia</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Learn the Art of Floral Care & Design</h2>
+    <p>Whether you’re nurturing a single stem or creating a centerpiece, we’ll guide you with expert tips, seasonal advice, and easy DIY tutorials.</p>
+    <div class="buttons">
+      <a href="care.html">Care Tips by Flower</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Flowers Across Cultures</h2>
+    <p>Discover how different cultures celebrate, honor, and interpret the same blooms—travel through traditions, myths, and stories carried by petals.</p>
+    <div class="buttons">
+      <a href="country.html">Explore Cultural Flower Maps</a>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>Flower Photography Gallery</h2>
+    <p>Take a visual stroll through our ever-growing collection of breathtaking floral moments captured by nature lovers and artists around the world.</p>
+    <div class="buttons">
+      <a href="gallery.html">View the Gallery</a>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Stay in Bloom with Us</h2>
+    <p>Join our monthly newsletter for fresh floral tips, stories, and seasonal inspiration delivered right to your inbox.</p>
+    <a href="subscribe.html">Subscribe to Newsletter</a>
+  </section>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+</body>
+</html>

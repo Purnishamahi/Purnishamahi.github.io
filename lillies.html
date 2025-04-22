@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liles</title>
+    <style>
+body {
+            background-color: #f8f1f4; /* Soft pink background */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* This controls the space between images */
+    padding: 100px 20px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+        .gallery img {
+width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
+            background: white;
+            
+        }
+.gallery div {
+
+            width: 100%;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+        }
+.gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .pagination button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ff4d88;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+ .add-to-cart {
+ width: 100%;
+            padding: 12px;
+            text-align: center;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff4d88, #ff99cc);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 10px;
+            box-shadow: 0 3px 6px rgba(255, 77, 136, 0.4);
+            display: block;
+                   }
+        .add-to-cart:hover {
+            transform: scale(1.05);
+ background: linear-gradient(45deg, #ff3366, #ff66b2);
+        }
+#pagination-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.page-btn:hover {
+    background-color: #ff4d88;
+    color: white;
+}
+
+.page-btn.active {
+    background-color: #ff4d88;
+    color: white;
+}
+.wishlist-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px; /* Increased size */
+            color: gray;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .wishlist-icon:hover, .wishlist-icon.active {
+            color: red;
+            transform: scale(1.2);
+        }
+.back-button {
+position: absolute;
+            top: 50px;  /* Move down */
+            left: 350px; /* Move right */
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 118, 171, 0.3);
+          
+        }
+
+        .back-button:hover {
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            box-shadow: 0 6px 15px rgba(255, 118, 171, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
+<div class="gallery" id="gallery"></div>
+    
+    <!-- Pagination -->
+   <div class="pagination">
+    <button id="prev" onclick="prevPage()">Previous</button>
+    <div id="pagination-numbers"></div>
+    <button id="next" onclick="nextPage()">Next</button>
+</div>
+
+    
+      
+   <script>
+    function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    const images = [
+"https://i.pinimg.com/236x/5d/75/2c/5d752c714218bd5ffb4a253695b037a4.jpg",  
+"https://i.pinimg.com/236x/04/f7/09/04f7092adf6fc8e3f0170a0b9b160832.jpg",  
+"https://i.pinimg.com/236x/7e/79/ec/7e79ec327b098ccb4781edc7be2a5f85.jpg",  
+"https://i.pinimg.com/236x/e0/8e/2f/e08e2f592bbfcec583093a1e04d7d103.jpg",  
+"https://i.pinimg.com/236x/b4/82/70/b482701d002dec090c02527862834c7a.jpg",  
+"https://i.pinimg.com/236x/85/bb/44/85bb4447b8a37db3137d471fe4ec0cb0.jpg",  
+"https://i.pinimg.com/236x/81/78/1e/81781e3f26f1dddda18a1f7e025dfafb.jpg",  
+"https://i.pinimg.com/236x/cb/f0/60/cbf0600e44b0e109fb6b2cddf397b02b.jpg",  
+"https://i.pinimg.com/236x/1c/0f/ba/1c0fbaaf83e8f0344e83d85b499074b0.jpg",  
+"https://i.pinimg.com/236x/a7/0a/4c/a70a4c9bac46e58e86422aa258b37851.jpg",  
+"https://i.pinimg.com/236x/c0/54/8b/c0548b7564314c1fe486595fc1f4842b.jpg",  
+"https://i.pinimg.com/236x/81/a2/fb/81a2fb498ef7ff8af842a68d3968d5b9.jpg",  
+"https://i.pinimg.com/236x/04/7a/15/047a15f28005d10a3705b8aa65cb1908.jpg",  
+"https://i.pinimg.com/236x/0a/77/f4/0a77f476a0d88a0a899c6e2a9eb7d53a.jpg",  
+
+        
+    ];
+
+    const names = [
+
+"Crimson Echo", "Silver Twilight", "Golden Ember", "Velvet Moon", "Dusky Horizon", "Rosewood Whimsy", "Obsidian Glow", "Mystic Breeze", "Celestial Charm", "Amber Whisper", "Midnight Serenity", "Azure Glow", "Scarlet Dusk", "Moonlit Harmony",      
+    ];
+const prices=[ "1468", "676", "1292", "982", "227", "1395", "241", "1434",
+"220", "1378", "1045", "1152", "1195",
+];
+ let currentPage = 0;
+const imagesPerPage = 8;
+
+function renderImages() {
+    console.log("Rendering images..."); // Debugging
+    
+    const gallery = document.getElementById("gallery");
+    gallery.innerHTML = "";
+    const start = currentPage * imagesPerPage;
+    const end = Math.min(start + imagesPerPage, images.length);
+
+    if (!images.length) {
+        console.error("No images found! Check if images array is correctly defined.");
+        return;
+    }
+
+    images.slice(start, end).forEach((imgSrc, index) => {
+        console.log(`Rendering: ${names[start + index]} | Image: ${imgSrc}`);
+        
+        const div = document.createElement("div");
+        div.classList.add("image-container");
+        div.style.position = "relative";
+
+        const name = document.createElement("p");
+        const img = document.createElement("img");
+        const price = document.createElement("p");
+        const heart = document.createElement("span");
+
+        const customPrice = prices[start + index] || "N/A";
+        price.textContent = `Price: ${customPrice}`;
+        price.style.color = "green";
+        price.style.fontWeight = "bold";
+
+        img.src = imgSrc;
+        img.onerror = () => console.error(`Failed to load image: ${imgSrc}`);
+
+        name.textContent = names[start + index] || "Unknown";
+        name.style.fontWeight = "bold";
+        name.style.textAlign = "center";
+        name.style.marginTop = "8px";
+
+        heart.innerHTML = "\u2665"; // Unicode heart symbol
+        heart.classList.add("wishlist-icon");
+        
+        // Check if item is in wishlist
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        let itemInWishlist = wishlist.find(item => item.name === names[start + index]);
+
+        if (itemInWishlist) {
+            heart.classList.add("active");
+        }
+
+        // Wishlist Toggle Event Listener
+        heart.addEventListener("click", function () {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            const itemIndex = wishlist.findIndex(item => item.name === names[start + index]);
+
+            if (itemIndex !== -1) {
+                // Remove from wishlist
+                wishlist.splice(itemIndex, 1);
+                heart.classList.remove("active");
+                alert(`${names[start + index]} removed from wishlist!`);
+            } else {
+                // Add to wishlist
+                wishlist.push({
+                    name: names[start + index],
+                    image: imgSrc,
+                    price: customPrice
+                });
+                heart.classList.add("active");
+                alert(`${names[start + index]} added to wishlist!`);
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        });
+        
+        const button = document.createElement("button");
+        button.classList.add("add-to-cart");
+        button.textContent = "Add to Cart";
+
+        button.addEventListener("click", function () {
+            const item = {
+                name: names[start + index],
+                image: imgSrc,
+                price: customPrice,
+                quantity: 1
+            };
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(item);
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert(`${names[start + index]} added to cart! Price: ${item.price}`);
+        });
+
+        div.appendChild(heart);
+        div.appendChild(img);
+        div.appendChild(name);
+        div.appendChild(price);
+        div.appendChild(button);
+        gallery.appendChild(div);
+    });
+
+    document.getElementById("prev").disabled = currentPage === 0;
+    document.getElementById("next").disabled = end >= images.length;
+
+    generatePagination(); 
+}
+ function generatePagination() {
+            const paginationContainer = document.getElementById("pagination-numbers");
+            paginationContainer.innerHTML = "";
+
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+
+            for (let i = 0; i < totalPages; i++) {
+                const pageButton = document.createElement("button");
+                pageButton.textContent = i + 1;
+                pageButton.classList.add("page-btn");
+
+                if (i === currentPage) {
+                    pageButton.classList.add("active"); 
+                }
+
+                pageButton.addEventListener("click", function () {
+                    currentPage = i;
+                    renderImages();
+                });
+
+                paginationContainer.appendChild(pageButton);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                renderImages();
+            }
+        }
+
+        function nextPage() {
+            if ((currentPage + 1) * imagesPerPage < images.length) {
+                currentPage++;
+                renderImages();
+            }
+        }
+// Function to add an item to the wishlist
+function addToWishlist(image, name, price) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    
+    // Add the new item
+    wishlist.push({ image, name, price });
+
+    // Save back to localStorage
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Item added to wishlist!");
+}
+
+// Function to display wishlist items on the wishlist page
+function displayWishlist() {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    let wishlistContainer = document.getElementById("wishlist-container");
+
+    wishlistContainer.innerHTML = ""; // Clear previous content
+
+    wishlist.forEach(item => {
+        let itemDiv = document.createElement("div");
+        itemDiv.innerHTML = `
+            <img src="${item.image}" width="100">
+            <p>Name: ${item.name}</p>
+            <p>Price: ${item.price}</p>
+            <button onclick="removeFromWishlist('${item.name}')">Remove</button>
+        `;
+        wishlistContainer.appendChild(itemDiv);
+    });
+}
+
+// Function to remove an item from the wishlist
+function removeFromWishlist(name) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    wishlist = wishlist.filter(item => item.name !== name);
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    displayWishlist(); // Refresh the wishlist display
+}
+
+// Call displayWishlist when the wishlist page loads
+window.onload = function () {
+    if (document.getElementById("wishlist-container")) {
+        displayWishlist();
+    }
+};
+
+        renderImages();
+
+
+</script>         
+</body>
+</html>

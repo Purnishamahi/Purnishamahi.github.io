@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>By Flower Type - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #FF4D88;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flower-card {
+      background-color: #ffe0eb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .flower-card:hover {
+      transform: scale(1.03);
+      background-color: #ffd1e0;
+    }
+
+    .flower-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .flower-card h3 {
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;
+      color: #e03e76;
+    }
+
+    .back-button-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flower Types Gallery</h1>
+  </header>
+
+  <section class="section">
+    <h2>Explore by Flower Type</h2>
+    <div class="gallery-grid">
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/3d/66/20/3d6620ad3916375fe783b47aff081280.jpg" alt="Rose"><h3>Rose</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/34/51/1f/34511f43a3c2c335f41d35602b5b29a2.jpg" alt="Tulip"><h3>Tulip</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/4f/13/80/4f13809594a456904adfbdd60dae981e.jpg" alt="Lily"><h3>Lily</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/09/05/50/0905501e3eae0d8f1e8170913afd0c72.jpg" alt="Sunflower"><h3>Sunflower</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/53/bc/70/53bc707d4f1353c3baa82da5e0384421.jpg" alt="Orchid"><h3>Orchid</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/ba/5d/77/ba5d778d8fff6d731d2070ffbee0a595.jpg" alt="Peony"><h3>Peony</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/96/cf/65/96cf657d8f525056a7ba744b6f752494.jpg" alt="Marigold"><h3>Marigold</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/8f/33/f3/8f33f3c0efaccb52634435bd51244b27.jpg" alt="Daisy"><h3>Daisy</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/28/1e/ff/281eff23350bc1b766d7cc1b14c68ba1.jpg" alt="Lavender"><h3>Lavender</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/ee/e7/91/eee791ec036efdb73f5ee33487192ee6.jpg" alt="Chrysanthemum"><h3>Chrysanthemum</h3></div>
+    </div>
+  </section>
+
+  <div class="back-button-container">
+    <a href="gallery.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. Capturing beauty, one bloom at a time.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rose - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fce4ec;
+      color: #4a2c2a;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+      display: inline-block;
+    }
+
+    .animated-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .peony-image {
+      float: right;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 0 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(236, 105, 157, 0.3);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff8f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FF4D88;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #7b6e66;
+      font-size: 0.9rem;
+    }
+ .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let heading = document.querySelector(".animated-text");
+      let text = heading.innerText;
+      heading.innerHTML = "";
+
+      text.split('').forEach((char, index) => {
+        let span = document.createElement("span");
+        span.innerText = char;
+        span.style.animationDelay = `${index * 0.1}s`;
+        heading.appendChild(span);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Rose</h1>
+  </header>
+
+  <div class="content">
+    <img class="peony-image" src="https://i.pinimg.com/474x/c2/de/cf/c2decf8ae99499bd0386bb0f8d7e1af4.jpg" alt="Rose Flower" />
+
+    <h2>Symbolism</h2>
+    <p><em>A symbol of love, passion, beauty, and secrecy — each petal a whisper of emotion.</em></p>
+    <ul>
+      <li><strong>Red:</strong> Romantic love, passion</li>
+      <li><strong>White:</strong> Purity, innocence, reverence</li>
+      <li><strong>Pink:</strong> Gratitude, admiration, sweetness</li>
+      <li><strong>Yellow:</strong> Friendship, joy, jealousy (Victorian)</li>
+      <li><strong>Orange:</strong> Desire, enthusiasm</li>
+    </ul>
+
+    <h2>Scientific Name</h2>
+    <p><em>Rosa</em></p>
+
+    <h2>In the Language of Flowers</h2>
+    <p>The rose is the most iconic bloom in floriography — a timeless messenger of love. In the Victorian era, a single red rose could declare deep affection, while a pink rose expressed tender admiration. Bouquets often blended colors and numbers to craft secret messages only the receiver could decode.</p>
+
+    <h2>Cultural Roots</h2>
+    <ul>
+      <li><strong>Ancient Greece & Rome:</strong> Sacred to Aphrodite and Venus, the goddesses of love.</li>
+      <li><strong>Persia:</strong> A poetic emblem of the soul and divine beauty.</li>
+      <li><strong>Christianity:</strong> Associated with the Virgin Mary as a symbol of purity.</li>
+      <li><strong>Islamic Gardens:</strong> Signifier of paradise and mystical beauty.</li>
+      <li><strong>Medieval Europe:</strong> Used in heraldry, most famously in the War of the Roses.</li>
+    </ul>
+
+    <h2>History</h2>
+    <p>Roses have been cultivated for over 5,000 years, first in China and the Middle East. The flower became a symbol of indulgence in Roman feasts and a treasured icon in Islamic and European gardens.</p>
+    <p>During England’s War of the Roses, the red and white blooms represented two rival houses. In the 19th century, the Victorians perfected the rose’s role as a wordless expression of the heart.</p>
+<a href="flowerexplore.html.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Encyclopedia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+      color: #ffeef3;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(255, 77, 136, 0.15);
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(255, 77, 136, 0.3);
+    }
+
+    .gallery-item p {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #e03e76;
+      font-size: 1.1rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+ .back-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flower Encyclopedia</h1>
+    <p>Dive into a world where every flower tells a story</p>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <a href="penoy.html.html">
+        <img src="https://i.pinimg.com/474x/92/1b/46/921b46c60fbdc70a44e66db6c29012bc.jpg" alt="Peony">
+        <p>Peony</p>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="rose.html">
+        <img src="https://i.pinimg.com/474x/ac/ce/0e/acce0e4a923058de1945126589e58bdc.jpg" alt="Rose">
+        <p>Rose</p>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="lilles.html">
+        <img src="https://i.pinimg.com/474x/9a/40/62/9a40624c2f12b278952d6926f82d4a4d.jpg" alt="Lily">
+        <p>Lily</p>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="sun.html">
+        <img src="https://i.pinimg.com/236x/35/bb/17/35bb17d2d8efd622b77c31e6faad4d59.jpg" alt="Sunflower">
+        <p>Sunflower</p>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="orchid.html">
+        <img src="https://i.pinimg.com/236x/05/68/79/056879876ee0bec460d5fcc70dabbf40.jpg" alt="Orchid">
+        <p>Orchid</p>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="tulips.html">
+        <img src="https://i.pinimg.com/474x/2f/1d/7a/2f1d7a70a7f3828cfeb30ad002f1740e.jpg" alt="Tulip">
+        <p>Tulip</p>
+      </a>
+    </div>
+  </div>
+<div style="text-align: center; padding: 2rem 0;">
+  <a href="flower.html" class="back-button">← Back to Home</a>
+</div>
+</body>
+</html>

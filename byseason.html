@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>By Season - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #FF4D88;
+      text-align: center;
+    }
+
+    .season-title {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #c0396d;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .flower-card {
+      background-color: #ffe0eb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .flower-card:hover {
+      transform: scale(1.03);
+      background-color: #ffd1e0;
+    }
+
+    .flower-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .flower-card h3 {
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;
+      color: #e03e76;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+.back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flower Gallery by Season</h1>
+  </header>
+
+  <section class="section">
+    <h2>Explore Seasonal Blossoms</h2>
+
+    <!-- Spring -->
+    <div class="season-title"> Spring Flowers</div>
+    <div class="gallery-grid">
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/1f/45/10/1f45107889e7d59d07a56d575ecdaf4e.jpg" alt="Cherry Blossom"><h3>Cherry Blossom</h3></div>
+ 
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/d0/0f/6f/d00f6fb3b2edb8bfb05e05c13bdd404d.jpg" alt="Hyacinth"><h3>Hyacinth</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/cc/a3/e1/cca3e1a9c54e2b310bcefe5c7635482e.jpg" alt="Daffodil"><h3>Daffodil</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/13/af/76/13af76811c4edb76dca59e7dd7418cb5.jpg" alt="Primrose"><h3>Primrose</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/9d/5f/7d/9d5f7dd8dc5cc56746775b80ba0d4b40.jpg" alt="Peony"><h3>Peony</h3></div>
+    </div>
+
+    <!-- Summer -->
+    <div class="season-title"> Summer Flowers</div>
+    <div class="gallery-grid">
+      <div class="flower-card"><img src="https://i.pinimg.com/736x/99/1a/08/991a0844eeddddbb7d0b4b1ebe7497a9.jpg" alt="Lavender"><h3>Lavender</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/33/80/f9/3380f921844d6cdf8a4c44a6f10237e7.jpg" alt="Zinnia"><h3>Zinnia</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/f1/32/84/f132845b46c26d38cd8272e9e3104e68.jpg" alt="Marigold"><h3>Marigold</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/a3/74/20/a37420e499c254a54d8d95b2b6c77b03.jpg" alt="Petunia"><h3>Petunia</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/474x/2c/cb/11/2ccb11f27e32250c3e5d9deb712e42b4.jpg" alt="Cosmos"><h3>Cosmos</h3></div>
+    </div>
+
+    <!-- Autumn -->
+    <div class="season-title"> Autumn Flowers</div>
+    <div class="gallery-grid">
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/16/a4/b8/16a4b8971786dbb54a960d0d1a6aa3c5.jpg" alt="Aster"><h3>Aster</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/21/ec/d3/21ecd3f25e73dbdd8a0bc507958482b0.jpg" alt="Goldenrod"><h3>Goldenrod</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/32/42/f7/3242f74bea88b9e6ae4e0497e898744e.jpg" alt="Sedum"><h3>Sedum</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/c0/ca/ca/c0cacae8275ae695b16d3499a0d7487f.jpg" alt="Anemone"><h3>Anemone</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/eb/93/13/eb931359380fee4eb6e806ec3ae3ba49.jpg" alt="Celosia"><h3>Celosia</h3></div>
+    </div>
+
+    <!-- Winter -->
+    <div class="season-title"> Winter Flowers</div>
+    <div class="gallery-grid">
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/2e/70/86/2e70860a4815c6621a18502810d8d3d8.jpg" alt="Camellia"><h3>Camellia</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/07/f0/06/07f0063bc38a57ad2403b3a5fba6445f.jpg" alt="Hellebore"><h3>Hellebore</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/45/da/1e/45da1e0c11b773c7cd6e2b0e60f3d214.jpg" alt="Winter Jasmine"><h3>Winter Jasmine</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/a3/d3/d9/a3d3d94a022265272dbe46cbdf766a62.jpg" alt="Snowdrop"><h3>Snowdrop</h3></div>
+      <div class="flower-card"><img src="https://i.pinimg.com/236x/90/00/38/90003834a5711686da4e9c1a54fadd32.jpg" alt="Viola"><h3>Viola</h3></div>
+ 
+  </section>
+  <div class="back-button-container">
+    <a href="gallery.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. Capturing beauty, one bloom at a time.
+  </footer>
+</body>
+</html>

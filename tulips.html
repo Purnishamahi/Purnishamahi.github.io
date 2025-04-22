@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tulip - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fce4ec;
+      color: #4a2c2a;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+      display: inline-block;
+    }
+
+    .animated-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .peony-image {
+      float: right;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 0 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(236, 105, 157, 0.3);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff8f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FF4D88;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #7b6e66;
+      font-size: 0.9rem;
+    }
+ .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let heading = document.querySelector(".animated-text");
+      let text = heading.innerText;
+      heading.innerHTML = "";
+
+      text.split('').forEach((char, index) => {
+        let span = document.createElement("span");
+        span.innerText = char;
+        span.style.animationDelay = `${index * 0.1}s`;
+        heading.appendChild(span);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Tulip</h1>
+  </header>
+
+  <div class="content">
+    <img class="peony-image" src="https://i.pinimg.com/236x/45/6e/1c/456e1c0adac566033213601fdace14a6.jpg" alt="Tulip Flower" />
+
+    <h2>Symbolism</h2>
+    <p><em>Graceful, sincere, and full of promise — the tulip blooms with gentle affection.</em></p>
+    <ul>
+      <li><strong>Red Tulip:</strong> True love and passion</li>
+      <li><strong>Yellow Tulip:</strong> Cheerfulness and sunshine</li>
+      <li><strong>Purple Tulip:</strong> Royalty and elegance</li>
+      <li><strong>White Tulip:</strong> Forgiveness and purity</li>
+    </ul>
+
+    <h2>Scientific Name</h2>
+    <p><em>Tulipa</em> (from the Persian word *delband*, meaning turban — for its shape)</p>
+
+    <h2>In the Language of Flowers</h2>
+    <p>Tulips carry messages of quiet love and refined emotion. They’re a way of saying “I care,” often without drama or demand. Their graceful shape and vibrant petals make them ideal for heartfelt yet elegant expressions.</p>
+
+    <h2>Cultural Roots</h2>
+    <ul>
+      <li><strong>Turkey & Persia:</strong> First cultivated; symbol of paradise on Earth. A sacred flower in Ottoman art and textiles.</li>
+      <li><strong>Netherlands:</strong> Iconic in Dutch history — became a national symbol and centerpiece of “Tulip Mania.”</li>
+      <li><strong>Victorian Era:</strong> A quiet declaration of love, often color-coded to express subtle intentions.</li>
+    </ul>
+
+    <h2>History</h2>
+    <p>Tulips originated in Central Asia, later blooming in Persian and Turkish gardens. By the 16th century, they spread to Europe and sparked a frenzy — especially in the Netherlands during the 1630s. "Tulip Mania" became the first recorded economic bubble.</p>
+    <p>Since then, tulips have continued to enchant gardeners, artists, and lovers with their elegant simplicity and deep emotional resonance.</p>
+<a href="flowerexplore.html.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+</body>
+</html>

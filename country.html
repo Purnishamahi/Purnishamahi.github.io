@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Cultural Flower Maps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fce4ec;
+      color: #4a2c2a;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #fff8f8;
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .country-link {
+      text-decoration: none;
+    }
+
+    .country-box {
+      background-color: #fff8f8;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      text-align: center;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .country-box:hover {
+      transform: scale(1.03);
+    }
+
+    .country-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .country-box h2 {
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #FF4D88;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+    .back-container {
+      display: flex;
+      justify-content: center; /* Center the back button */
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .back-container {
+        justify-content: center;
+        padding: 1.5rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #7b6e66;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Cultural Flower Maps</h1>
+  </header>
+
+  <div class="gallery">
+    <a class="country-link" href="japan.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/236x/1e/ab/76/1eab76e294f559f00f52369f83f41e09.jpg" alt="Japan">
+        <h2>Japan</h2>
+      </div>
+    </a>
+
+    <a class="country-link" href="netherlands.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/236x/2a/ab/6b/2aab6b24012d923cc712fee251a12ced.jpg" alt="Netherlands">
+        <h2>Netherlands</h2>
+      </div>
+    </a>
+
+    <a class="country-link" href="india.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/236x/67/39/a7/6739a7c3496f74486be133f6d5b01bcd.jpg" alt="India">
+        <h2>India</h2>
+      </div>
+    </a>
+
+    <a class="country-link" href="thai.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/736x/7d/f2/f9/7df2f9c609e4200bded047b25cfbb780.jpg" alt="Thailand">
+        <h2>Thailand</h2>
+      </div>
+    </a>
+
+    <a class="country-link" href="usa.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/236x/ea/46/eb/ea46eb09b417b6211611e5985dd537a7.jpg" alt="USA">
+        <h2>USA</h2>
+      </div>
+    </a>
+
+    <a class="country-link" href="colo.html">
+      <div class="country-box">
+        <img src="https://i.pinimg.com/236x/03/e1/82/03e1821d5b99141b55081771cb1fdda9.jpg" alt="Colombia">
+        <h2>Colombia</h2>
+      </div>
+    </a>
+  </div>
+
+  <div class="back-container">
+    <a href="flower.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+
+</body>
+</html>

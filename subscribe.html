@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe to The Secret Garden</title>
+  <style>
+    /* Box sizing fix for consistent layout */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fce4ec;
+      font-family: 'Open Sans', sans-serif;
+      color: #4a2c2a;
+      padding: 2rem;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FF4D88;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      background: #fff8f8;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #FF4D88;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #e03c73;
+    }
+
+    .back-button-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      input, select, button {
+        font-size: 1.05rem;
+        padding: 1rem;
+      }
+
+      form {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Join The Secret Garden</h1>
+
+  <form action="thankyou.html" method="GET">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="zip">ZIP Code</label>
+    <input type="text" id="zip" name="zip" required />
+
+    <label for="payment">Payment Method</label>
+    <select id="payment" name="payment" required>
+      <option value="">Select</option>
+      <option value="credit">Credit Card</option>
+      <option value="debit">Debit Card</option>
+      <option value="paypal">PayPal</option>
+    </select>
+
+    <button type="submit">Subscribe Now</button>
+  </form>
+
+  <div class="back-button-container">
+    <a href="flower.html" class="back-button">← Back</a>
+  </div>
+
+</body>
+</html>

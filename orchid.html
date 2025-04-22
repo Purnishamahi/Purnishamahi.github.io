@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orchid - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fce4ec;
+      color: #4a2c2a;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+      display: inline-block;
+    }
+
+    .animated-text span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .peony-image {
+      float: right;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 0 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(236, 105, 157, 0.3);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff8f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #FF4D88;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #7b6e66;
+      font-size: 0.9rem;
+    }
+ .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let heading = document.querySelector(".animated-text");
+      let text = heading.innerText;
+      heading.innerHTML = "";
+
+      text.split('').forEach((char, index) => {
+        let span = document.createElement("span");
+        span.innerText = char;
+        span.style.animationDelay = `${index * 0.1}s`;
+        heading.appendChild(span);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="animated-text">Orchid</h1>
+  </header>
+
+  <div class="content">
+    <img class="peony-image" src="https://i.pinimg.com/474x/31/04/2e/31042eda229c868f34e52d6fd348aac8.jpg" alt="Orchid Flower" />
+
+    <h2>Symbolism</h2>
+    <p><em>Luxury, mystery, sensuality, and rare beauty — the orchid is an icon of grace and allure.</em></p>
+    <ul>
+      <li><strong>Purple Orchid:</strong> Royalty and admiration</li>
+      <li><strong>White Orchid:</strong> Purity and reverence</li>
+      <li><strong>Pink Orchid:</strong> Joy and femininity</li>
+      <li><strong>Blue Orchid:</strong> Rarity and uniqueness</li>
+    </ul>
+
+    <h2>Scientific Name</h2>
+    <p><em>Orchidaceae</em></p>
+
+    <h2>In the Language of Flowers</h2>
+    <p>Orchids speak in a language of fascination and elegance. To gift one is to say: "You are rare, you are exquisite." In floriography, they express mature charm, refinement, and a touch of the exotic. Ideal for romantic gestures and grand statements alike.</p>
+
+    <h2>Cultural Roots</h2>
+    <ul>
+      <li><strong>China:</strong> Associated with integrity and refinement — one of the "Four Noble Ones" in traditional art.</li>
+      <li><strong>Japan:</strong> A symbol of wealth and bravery, often admired by samurai and nobility.</li>
+      <li><strong>Aztecs:</strong> Used in a mixture of vanilla and cacao, believed to give strength and power.</li>
+      <li><strong>Victorian Era:</strong> Seen as exotic treasures — rare, coveted, and sensual.</li>
+    </ul>
+
+    <h2>History</h2>
+    <p>With over 25,000 species, orchids are among the most diverse and ancient blooms. First documented in ancient Greece, they were believed to influence virility and strength. In the 1800s, orchid collecting became an obsession among European aristocracy — called "orchidelirium."</p>
+    <p>Today, they continue to captivate with their delicate forms, exotic beauty, and aura of quiet mystery.</p>
+<a href="flowerexplore.html.html" class="back-button">← Back</a>
+  </div>
+
+  <footer>
+    © 2025 The Secret Garden. All rights blooming.
+  </footer>
+</body>
+</html>

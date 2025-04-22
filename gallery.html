@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Photography Gallery - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff8f8;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #FF4D88;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-box img {
+  width: 100%;
+  height: 250px; /* You can adjust height as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+    .gallery-box:hover {
+      transform: scale(1.03);
+      background-color: #ffd1e0;
+    }
+
+    .gallery-box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-box h3 {
+      color: #e03e76;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-box a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .gallery-box a:hover {
+      background-color: #e03e76;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #7b6e66;
+      background-color: #fff0f5;
+    }
+.back-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flower Photography Gallery</h1>
+  </header>
+
+  <section class="section">
+    <h2>Browse by Category</h2>
+    <div class="gallery-grid">
+      <div class="gallery-box">
+        <img src="https://i.pinimg.com/474x/78/63/c0/7863c0686220ee075a242fa8de5f5d2b.jpg" alt="By Flower Type">
+        <h3>By Flower Type</h3>
+        <a href="byflower.html">View</a>
+      </div>
+      <div class="gallery-box">
+        <img src="https://i.pinimg.com/474x/38/04/46/380446f55020787a63651104d9a71caf.jpg" alt="By Season">
+        <h3>By Season</h3>
+        <a href="byseason.html">View</a>
+      </div>
+      <div class="gallery-box">
+        <img src="https://i.pinimg.com/474x/88/0a/2c/880a2c407367d611a91d60814fb0b0d6.jpg" alt="By Occasion">
+        <h3>By Occasion</h3>
+        <a href="byocassion.html">View</a>
+      </div>
+    </div>
+  </section>
+ <div class="back-button-container">
+    <a href="flower.html" class="back-button">← Back</a>
+  </div>
+
+
+  <footer>
+    © 2025 The Secret Garden. Capturing beauty, one bloom at a time.
+  </footer>
+</body>
+</html>

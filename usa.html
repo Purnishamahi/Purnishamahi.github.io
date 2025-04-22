@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USA Flower Festivals - The Secret Garden</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff0f5;
+      color: #4a2c2a;
+    }
+
+    header {
+      background-color: #FF4D88;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .festival-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .festival {
+      background-color: #fff8f8;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .festival img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .festival-info {
+      padding: 1rem;
+    }
+
+    .festival-info h2 {
+      font-family: 'Playfair Display', serif;
+      color: #FF4D88;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .festival-info p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .festival-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 0.8rem 1.6rem;
+      background-color: #FF4D88;
+      color: #fff8f8;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d84575;
+    }
+
+    .back-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>USA Flower Festivals</h1>
+  </header>
+
+  <div class="festival-container">
+    <div class="festival">
+      <img src="https://i.pinimg.com/236x/92/93/1f/92931f68b5665442fcc4b940deec35ca.jpg" alt="National Cherry Blossom Festival">
+      <div class="festival-info">
+        <h2>National Cherry Blossom Festival – Washington, D.C.</h2>
+        <p>Celebrated each spring, this iconic festival honors the 1912 gift of cherry trees from Tokyo. The Tidal Basin is transformed with soft pink blossoms, accompanied by parades, art exhibits, performances, and fireworks along the Potomac River.</p>
+      </div>
+    </div>
+
+    <div class="festival">
+      <img src="https://i.pinimg.com/236x/f1/cc/01/f1cc01a74fc8cd28be675360510167d1.jpg" alt="The Flower Fields at Carlsbad Ranch">
+      <div class="festival-info">
+        <h2>The Flower Fields – Carlsbad, California</h2>
+        <p>From March to May, fifty acres of Giant Tecolote Ranunculus bloom in a vibrant rainbow across the rolling hills of Carlsbad. Visitors enjoy tractor rides, themed gardens, and panoramic views of the Pacific Ocean in the distance.</p>
+      </div>
+    </div>
+
+    <div class="festival">
+      <img src="https://i.pinimg.com/236x/58/21/a4/5821a4152c3ee44d66750218aa2d2567.jpg" alt="Skagit Valley Tulip Festival">
+      <div class="festival-info">
+        <h2>Skagit Valley Tulip Festival – Washington State</h2>
+        <p>Every April, the fertile Skagit Valley becomes a sea of color with rows upon rows of tulips. This month-long celebration includes tulip-themed art, family-friendly events, photo contests, and farm tours in a stunning countryside setting.</p>
+      </div>
+    </div>
+
+    <div class="festival">
+      <img src="https://i.pinimg.com/736x/dc/82/c8/dc82c8024cf68dd8449e52b17327d535.jpg" alt="Portland Rose Festival">
+      <div class="festival-info">
+        <h2>Portland Rose Festival – Oregon</h2>
+        <p>Dating back to 1907, the Portland Rose Festival features the Grand Floral Parade, dragon boat races, and the crowning of the Rose Queen. The city’s nickname, “City of Roses,” comes to life with thousands of blooms showcased in elaborate displays.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-container">
+    <a href="country.html" class="back-button">← Back</a>
+  </div>
+
+</body>
+</html>
